@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fiyah's Portfolio</title>
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <!-- Minimal Corner HUD Marker-->
+      <div class="hud hud-tl">[ SYS // 01 ] &nbsp; FIYAH.IO</div>
+      <div class="hud hud-tr">
+        <span class="pip"></span> [ STATUS //
+        <span id="status-text">BLOOMING</span> ]
+      </div>
+
+      <!-- Lotus Animation -->
+      <div id="lotus"></div>
+
+      <!-- Typography Lockup -->
+      <h1 id="hero-title" class="title-reveal">
+        <span class="lockup-eyebrow">Fiyah’s</span>
+        <span class="lockup-main">Portfolio</span>
+      </h1>
+      <div class="scroll-prompt">SCROLL TO EXPLORE</div>
+    </section>
+
+    <script src="lotus.js"></script>
+    <script>
+      const lotus = Lotus.mount("#lotus");
+      const title = document.getElementById("hero-title");
+      const statusText = document.getElementById("status-text");
+      document.getElementById("lotus").addEventListener("lotus:bloomed", () => {
+        // Trigger the slow fade-in effect
+        title.classList.add("visible");
+        // Update the status text
+        if (statusText) {
+          statusText.textContent = "BLOOMED";
+        }
+      });
+    </script>
+
+    <main class="work" id="work">
+      <div class="work-header">[PROJECTS]</div>
+
+      <div class="work-grid">
+        <!--Left column: Project info showcase-->
+        <article class="project-info">
+          <div class="project-index" id="proj-index">01 / 03</div>
+          <h2 class="project-name" id="proj-title">Camp Gear</h2>
+          <p class="project-desc" id="proj-desc">
+            A website where students or club members can reserve shared items
+            (cameras, laptops, projectors, study pods) for specific date/time
+            slots without double-booking.
+          </p>
+          <div class="project-tags" id="proj-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>MySQL</span>
+          </div>
+          <a
+            href="#"
+            class="launch-link"
+            id="proj-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Project
+          </a>
+        </article>
+
+        <!-- Right Column: ASCII TV Mount-->
+        <div class="tv-column">
+          <div id="ascii-tv"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="tv-channels.js"></script>
+    <script>
+      TVChannels.mount("#ascii-tv", [
+        {
+          channel: "01",
+          title: "Camp Gear",
+          description:
+            "A website where students or club members can reserve shared items for specific date/time slots without double-booking.",
+          tags: ["HTML/CSS", "JAVASCRIPT", "PYTHON", "MYSQL"],
+          videoSrc: "gifs/hello kitty_tv.mp4",
+          link: "https://github.com/yourusername/project-1",
+        },
+
+        {
+          channel: "02",
+          title: "2D Terminal Maze",
+          description:
+            "A terminal-based 2D platformer and maze game in C featuring dynamic map loading, gravity physics, and an undo stack.",
+          tags: ["C90", "UNIX", "DATA STRUCTURES"],
+          videoSrc: "",
+          link: "https://github.com/yourusername/project-2",
+        },
+
+        {
+          channel: "03",
+          title: "Biogas Logistics System",
+          description:
+            "A 4-module route optimization and scheduling suite using Dijkstra's algorithm, hash tables, and binary max-heaps.",
+          tags: ["JAVA", "ALGORITHMS", "GRAPHS"],
+          videoSrc: "",
+          link: "https://github.com/yourusername/project-3",
+        },
+      ]);
+    </script>
+  </body>
+</html>
