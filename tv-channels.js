@@ -46,7 +46,7 @@ const TVChannels = (() => {
               <div class="tv-crt-bezel">
                 <div class="tv-crt-glass">
                   <div class="tv-crt-hud-top">
-                    <span id="tv-fps-status">60 FPS // BUFFER_OK</span>
+                    <span id="tv-fps-status">60 FPS</span>
                     <span id="tv-screen-project">PROJECT 01 / ${formatTwoDigits(projects.length)}</span>
                   </div>
 
