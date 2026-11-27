@@ -69,9 +69,7 @@
 
       <!-- RIGHT: the copy -->
       <div class="about-copy">
-        <p class="kicker" data-rise style="--i: 0">
-          [ ABOUT ME ]
-        </p>
+        <p class="kicker" data-rise style="--i: 0">[ ABOUT ME ]</p>
 
         <h2 class="about-name" id="about-name" data-rise style="--i: 1">
           Fiyah
@@ -81,8 +79,8 @@
         </p>
 
         <p class="about-p" data-rise style="--i: 3">
-          I enjoy creating interactive digital experiences where terminal aesthetics,
-          captivating art, and modern front-end engineering collide.
+          I enjoy creating interactive digital experiences where terminal
+          aesthetics, captivating art, and modern front-end engineering collide.
         </p>
         <p class="about-p" data-rise style="--i: 4">
           Driven by curiosity for system mechanics, low-level architecture, and
@@ -91,14 +89,14 @@
 
         <div class="ess" data-rise style="--i: 5">
           <fieldset>
-            <legend>[ THE ESSENTIALS ]</legend>
+            <legend>[ BACKGROUND ]</legend>
             <dl class="ess-rows">
               <dt>BASED IN:</dt>
               <dd>Sarawak, Malaysia</dd>
               <dt>FOCUS:</dt>
               <dd>Creative Coding // App Designs // Full-Stack Systems</dd>
               <dt>STATUS:</dt>
-              <dd>Developing interactive web experiments &amp; custom UI</dd>
+              <dd>Studying Bachelors in Software Engineer (Y2)</dd>
             </dl>
           </fieldset>
         </div>
@@ -116,7 +114,6 @@
           <li>HTML &amp; CSS</li>
           <li>Git</li>
         </ul>
-
       </div>
     </section>
 
@@ -175,9 +172,9 @@
 
         {
           channel: "02",
-          title: "2D Terminal Maze",
+          title: "Hearth & Brew",
           description:
-            "A terminal-based 2D platformer and maze game in C featuring dynamic map loading, gravity physics, and an undo stack.",
+            "A cozy card game where the players can pick ingredient/recipe cards and slot them into a table layout to test the synergies of the flavour. Players can also undo their mistakes if they like.",
           tags: ["C90", "UNIX", "DATA STRUCTURES"],
           videoSrc: "",
           link: "https://github.com/yourusername/project-2",
@@ -185,9 +182,9 @@
 
         {
           channel: "03",
-          title: "Biogas Logistics System",
+          title: "Post it",
           description:
-            "A 4-module route optimization and scheduling suite using Dijkstra's algorithm, hash tables, and binary max-heaps.",
+            "A website that allows the admin to keep track of parcel scans/shipments, check for delivery success/failure, filter logs and replay failed drop-offs.",
           tags: ["JAVA", "ALGORITHMS", "GRAPHS"],
           videoSrc: "",
           link: "https://github.com/yourusername/project-3",
@@ -197,142 +194,163 @@
       const projectSection = document.querySelector(".work");
       if (projectSection) {
         projectSection.classList.add("is-armed");
-        const projectObserver = new IntersectionObserver((entries) => {
-          if (entries.some((entry) => entry.isIntersecting)) {
-            projectSection.classList.add("is-in");
-            projectObserver.disconnect();
-          }
-        }, { threshold: 0.15 });
+        const projectObserver = new IntersectionObserver(
+          (entries) => {
+            if (entries.some((entry) => entry.isIntersecting)) {
+              projectSection.classList.add("is-in");
+              projectObserver.disconnect();
+            }
+          },
+          { threshold: 0.15 },
+        );
         projectObserver.observe(projectSection);
       }
     </script>
 
-    <footer class="outro-section" id="contact" aria-label="Closing and contact section">
-  <div class="outro-inner">
-    <svg
-      class="outro-lotus-mark"
-      viewBox="0 0 160 116"
-      aria-hidden="true"
-      data-slide-in="left"
-      style="--slide-order: 0"
+    <footer
+      class="outro-section"
+      id="contact"
+      aria-label="Closing and contact section"
     >
-      <path d="M80 83C61 65 64 37 80 15C96 37 99 65 80 83Z" />
-      <path d="M76 82C54 70 39 50 45 29C64 40 76 60 80 82Z" />
-      <path d="M84 82C106 70 121 50 115 29C96 40 84 60 80 82Z" />
-      <path d="M73 84C49 90 27 80 16 62C40 59 63 67 80 82Z" />
-      <path d="M87 84C111 90 133 80 144 62C120 59 97 67 80 82Z" />
-      <path d="M80 83C64 86 49 95 39 104C55 105 69 101 80 92C91 101 105 105 121 104C111 95 96 86 80 83Z" />
-      <path class="lotus-sparkles" d="M28 34V27M24.5 30.5H31.5M132 34V27M128.5 30.5H135.5M80 8V3M77.5 5.5H82.5" />
-    </svg>
+      <div class="outro-inner">
+        <svg
+          class="outro-lotus-mark"
+          viewBox="0 0 160 116"
+          aria-hidden="true"
+          data-slide-in="left"
+          style="--slide-order: 0"
+        >
+          <path d="M80 83C61 65 64 37 80 15C96 37 99 65 80 83Z" />
+          <path d="M76 82C54 70 39 50 45 29C64 40 76 60 80 82Z" />
+          <path d="M84 82C106 70 121 50 115 29C96 40 84 60 80 82Z" />
+          <path d="M73 84C49 90 27 80 16 62C40 59 63 67 80 82Z" />
+          <path d="M87 84C111 90 133 80 144 62C120 59 97 67 80 82Z" />
+          <path
+            d="M80 83C64 86 49 95 39 104C55 105 69 101 80 92C91 101 105 105 121 104C111 95 96 86 80 83Z"
+          />
+          <path
+            class="lotus-sparkles"
+            d="M28 34V27M24.5 30.5H31.5M132 34V27M128.5 30.5H135.5M80 8V3M77.5 5.5H82.5"
+          />
+        </svg>
 
-    <h2
-      class="outro-heading"
-      data-slide-in="right"
-      style="--slide-order: 1"
-    >
-      Plant a New Idea.
-    </h2>
+        <h2
+          class="outro-heading"
+          data-slide-in="right"
+          style="--slide-order: 1"
+        >
+          Plant a New Idea.
+        </h2>
 
-    <div
-      class="outro-subline"
-      aria-hidden="true"
-      data-slide-in="left"
-      style="--slide-order: 2"
-    ></div>
+        <div
+          class="outro-subline"
+          aria-hidden="true"
+          data-slide-in="left"
+          style="--slide-order: 2"
+        ></div>
 
-    <!-- Signal Station Box -->
-    <div
-      class="signal-station"
-      role="region"
-      aria-label="Signal station contact"
-      data-slide-in="right"
-      style="--slide-order: 3"
-    >
-      <div class="signal-station-top">
-        <span class="signal-corner-tl" aria-hidden="true">┌</span>
-        <span class="signal-station-label">[ CONTACT ]</span>
-        <span class="signal-line" aria-hidden="true"></span>
-        <span class="signal-corner-tr" aria-hidden="true">┐</span>
+        <!-- Signal Station Box -->
+        <div
+          class="signal-station"
+          role="region"
+          aria-label="Signal station contact"
+          data-slide-in="right"
+          style="--slide-order: 3"
+        >
+          <div class="signal-station-top">
+            <span class="signal-corner-tl" aria-hidden="true">┌</span>
+            <span class="signal-station-label">[ CONTACT ]</span>
+            <span class="signal-line" aria-hidden="true"></span>
+            <span class="signal-corner-tr" aria-hidden="true">┐</span>
+          </div>
+
+          <div class="signal-station-body">
+            <p class="signal-quote">
+              "Got an idea, a project, or just want to talk shop?"
+            </p>
+          </div>
+
+          <div class="signal-station-bottom" aria-hidden="true">
+            <span>└</span>
+            <span class="signal-line"></span>
+            <span>┘</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <nav
+          class="outro-actions"
+          aria-label="Contact and profile links"
+          data-slide-in="left"
+          style="--slide-order: 4"
+        >
+          <a href="mailto:nrafiyah10@example.com" class="outro-btn"
+            >[ EMAIL ME ↗ ]</a
+          >
+          <a
+            href="https://github.com/fiyaaaare"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="outro-btn"
+          >
+            [ GITHUB &lt;/&gt; ]
+          </a>
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="outro-btn"
+          >
+            [ LINKEDIN ↩ ]
+          </a>
+          <a href="#resume" class="outro-btn">[ READ RESUME ↓ ]</a>
+        </nav>
       </div>
 
-      <div class="signal-station-body">
-        <p class="signal-quote">"Got an idea, a project, or just want to talk shop?"</p>
-      </div>
-
-      <div class="signal-station-bottom" aria-hidden="true">
-        <span>└</span>
-        <span class="signal-line"></span>
-        <span>┘</span>
-      </div>
-    </div>
-
-    <!-- Action Buttons -->
-    <nav
-      class="outro-actions"
-      aria-label="Contact and profile links"
-      data-slide-in="left"
-      style="--slide-order: 4"
-    >
-      <a href="mailto:nrafiyah10@example.com" class="outro-btn">[ EMAIL ME ↗ ]</a>
-      <a
-        href="https://github.com/fiyaaaare"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="outro-btn"
+      <!-- Bottom Footer Bar -->
+      <div
+        class="outro-footer-bar"
+        data-slide-in="right"
+        style="--slide-order: 5"
       >
-        [ GITHUB &lt;/&gt; ]
-      </a>
-      <a
-        href="https://linkedin.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="outro-btn"
-      >
-        [ LINKEDIN ↩ ]
-      </a>
-      <a href="#resume" class="outro-btn">[ READ RESUME ↓ ]</a>
-    </nav>
-  </div>
+        <div class="outro-footer-dashes" aria-hidden="true">
+          ========================================================================================================================================================================
+        </div>
+        <div class="outro-footer-row">
+          <span class="outro-footer-left">© 2026 FIYAH •</span>
+          <a href="#top" class="back-to-top-link" id="back-to-top"
+            >[ BACK TO TOP ↑ ]</a
+          >
+        </div>
+      </div>
+    </footer>
 
-  <!-- Bottom Footer Bar -->
-  <div
-    class="outro-footer-bar"
-    data-slide-in="right"
-    style="--slide-order: 5"
-  >
-    <div class="outro-footer-dashes" aria-hidden="true">
-      ========================================================================================================================================================================
-    </div>
-    <div class="outro-footer-row">
-      <span class="outro-footer-left">© 2026 FIYAH •</span>
-      <a href="#top" class="back-to-top-link" id="back-to-top">[ BACK TO TOP ↑ ]</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  (() => {
-    const outroSection = document.querySelector(".outro-section");
-    if (outroSection && "IntersectionObserver" in window) {
-      outroSection.classList.add("is-armed");
-      const outroObserver = new IntersectionObserver((entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          outroSection.classList.add("is-in");
-          outroObserver.disconnect();
+    <script>
+      (() => {
+        const outroSection = document.querySelector(".outro-section");
+        if (outroSection && "IntersectionObserver" in window) {
+          outroSection.classList.add("is-armed");
+          const outroObserver = new IntersectionObserver(
+            (entries) => {
+              if (entries.some((entry) => entry.isIntersecting)) {
+                outroSection.classList.add("is-in");
+                outroObserver.disconnect();
+              }
+            },
+            { threshold: 0.12 },
+          );
+          outroObserver.observe(outroSection);
         }
-      }, { threshold: 0.12 });
-      outroObserver.observe(outroSection);
-    }
 
-    const backToTop = document.getElementById("back-to-top");
+        const backToTop = document.getElementById("back-to-top");
 
-    if (backToTop) {
-      backToTop.addEventListener("click", (event) => {
-        event.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    }
-  })();
-</script>
+        if (backToTop) {
+          backToTop.addEventListener("click", (event) => {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
